@@ -23,7 +23,6 @@ resource "aws_launch_template" "swiggy-web-template" {
   }
   user_data = base64encode(file("apache.sh"))
   lifecycle {
-    prevent_destroy = true
     ignore_changes  = all
   }
 }
